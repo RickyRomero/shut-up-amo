@@ -366,19 +366,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"amo-deployment@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "amo-deployment@workspace:."
-  dependencies:
-    dotenv: ^9.0.2
-    form-data: ^4.0.0
-    jsonwebtoken: ^8.5.1
-    node-fetch: ^2.6.1
-    standard: ^16.0.3
-    web-ext: ^6.1.0
-  languageName: unknown
-  linkType: soft
-
 "ansi-align@npm:^3.0.0":
   version: 3.0.0
   resolution: "ansi-align@npm:3.0.0"
@@ -4670,6 +4657,19 @@ __metadata:
   checksum: 3559ff550917ece921d252edf42eb54827540e9676e537137ace236df8f9b78e48c542ae0b3f8876fea0faf5826c97629d5b8cb9ac7dee287260e9804fb8132c
   languageName: node
   linkType: hard
+
+"shut-up-amo@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "shut-up-amo@workspace:."
+  dependencies:
+    dotenv: ^9.0.2
+    form-data: ^4.0.0
+    jsonwebtoken: ^8.5.1
+    node-fetch: ^2.6.1
+    standard: ^16.0.3
+    web-ext: ^6.1.0
+  languageName: unknown
+  linkType: soft
 
 "side-channel@npm:^1.0.4":
   version: 1.0.4
