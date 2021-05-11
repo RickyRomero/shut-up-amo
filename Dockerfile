@@ -5,7 +5,7 @@ LABEL "homepage"="https://github.com/RickyRomero/shut-up-amo"
 LABEL "maintainer"="Ricky Romero <ricky.romero@gmail.com>"
 
 RUN yarn
-RUN sudo mkdir -p /amo/build /amo/extension
+RUN mkdir -p /amo/build /amo/extension
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
