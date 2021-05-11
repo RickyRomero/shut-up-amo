@@ -1,5 +1,6 @@
 FROM node:14-alpine
 
+ENV NODE_ENV production
 LABEL "repository"="https://github.com/RickyRomero/shut-up-amo"
 LABEL "homepage"="https://github.com/RickyRomero/shut-up-amo"
 LABEL "maintainer"="Ricky Romero <ricky.romero@gmail.com>"
