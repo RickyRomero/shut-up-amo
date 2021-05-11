@@ -5,7 +5,7 @@ LABEL "repository"="https://github.com/RickyRomero/shut-up-amo"
 LABEL "homepage"="https://github.com/RickyRomero/shut-up-amo"
 LABEL "maintainer"="Ricky Romero <ricky.romero@gmail.com>"
 
-COPY ./.yarnrc ./
+COPY ./.yarnrc.yml ./
 COPY ./.yarn ./
 COPY ./package.json ./
 COPY ./yarn.lock ./
