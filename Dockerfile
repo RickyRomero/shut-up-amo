@@ -12,7 +12,7 @@ COPY package.json ./
 COPY yarn.lock ./
 COPY src ./src
 
-RUN yarn --silent --frozen-lockfile
+RUN yarn --silent --immutable
 RUN mkdir -p /amo/build /amo/extension
 RUN chown -R 1000:1000 /amo/build /amo/extension
 
