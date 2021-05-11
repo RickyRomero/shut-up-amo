@@ -1,0 +1,21 @@
+{
+  "name": "shut-up-amo",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "web-ext build --config=src/web-ext-config.js",
+    "lint": "standard",
+    "prebuild": "node src/prebuild.js",
+    "submit": "node src/submit.js"
+  },
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "form-data": "^4.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "node-fetch": "^2.6.1",
+    "web-ext": "^6.1.0"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
