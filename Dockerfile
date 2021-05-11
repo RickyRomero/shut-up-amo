@@ -5,11 +5,12 @@ LABEL "repository"="https://github.com/RickyRomero/shut-up-amo"
 LABEL "homepage"="https://github.com/RickyRomero/shut-up-amo"
 LABEL "maintainer"="Ricky Romero <ricky.romero@gmail.com>"
 
-COPY ./.yarnrc.yml ./
-COPY ./.yarn ./
-COPY ./package.json ./
-COPY ./yarn.lock ./
-COPY ./src ./src
+WORKDIR /usr/app
+COPY .yarn ./.yarn
+COPY .yarnrc.yml ./
+COPY package.json ./
+COPY yarn.lock ./
+COPY src ./src
 
 RUN yarn
 RUN mkdir -p /amo/build
