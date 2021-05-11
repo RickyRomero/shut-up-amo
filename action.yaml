@@ -1,0 +1,8 @@
+name: 'Shut Up AMO'
+description: 'Deploys Shut Up for Firefox'
+branding:
+  color: 'red'
+  icon: 'package'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
