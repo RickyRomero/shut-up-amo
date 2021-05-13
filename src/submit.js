@@ -51,10 +51,16 @@ const submitBuild = async () => {
       authorization: `JWT ${generateJwt()}`
     }
   })
-  const responseBody = await response.json()
+  const body = await response.json()
 
-  console.log('Done.')
-  console.dir(responseBody)
+  if (body.error) {
+    console.error('The server failed to process the upload.')
+    console.dir(body)
+    process.exit(1)
+  } else {
+    console.log('Uploaded successfully.')
+    console.dir(body)
+  }
 }
 
 submitBuild()
