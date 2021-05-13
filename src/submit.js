@@ -1,5 +1,6 @@
 require('dotenv').config()
-const fs = require('fs')
+const fs = require('fs').promises
+fs.constants = require('fs').constants
 const path = require('path')
 const fetch = require('node-fetch')
 const jwt = require('jsonwebtoken')
@@ -26,6 +27,12 @@ const submitBuild = async () => {
   const buildDir = path.resolve(__dirname, config.artifactsDir)
   const manifest = require(path.join(sourceDir, 'manifest.json'))
   const buildPath = path.join(buildDir, `${process.env.AMO_BUILD_NAME}-${manifest.version}.zip`)
+  try {
+    await fs.access(buildPath, fs.constants.F_OK)
+  } catch (e) {
+    console.error("Built file not present to upload. Can't continue.")
+    process.exit(1)
+  }
 
   console.log('Reading release file...')
   const form = new FormData()
