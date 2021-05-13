@@ -1,6 +1,7 @@
 require('dotenv').config()
 const fs = require('fs').promises
 fs.constants = require('fs').constants
+const { createReadStream } = require('fs')
 const path = require('path')
 const fetch = require('node-fetch')
 const jwt = require('jsonwebtoken')
@@ -36,7 +37,7 @@ const submitBuild = async () => {
 
   console.log('Reading release file...')
   const form = new FormData()
-  form.append('upload', fs.createReadStream(buildPath))
+  form.append('upload', createReadStream(buildPath))
 
   console.log('Configuring request...')
   const amoRestEndpoint = 'https://addons.mozilla.org/api/v5/addons'
