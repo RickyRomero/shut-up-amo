@@ -59,7 +59,6 @@ const submitBuild = async () => {
     process.exit(1)
   } else {
     console.log('Uploaded successfully.')
-    console.dir(body)
   }
 }
 
