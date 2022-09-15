@@ -5,7 +5,6 @@
   "scripts": {
     "build": "web-ext build --config=src/web-ext-config.js",
     "lint": "standard",
-    "prebuild": "node src/prebuild.js",
     "submit": "node src/submit.js"
   },
   "dependencies": {
