@@ -5,7 +5,7 @@ set -eu
 
 echo "Copying extension files..."
 cd /usr/app
-cp -R $GITHUB_WORKSPACE/* /amo/extension/
+cp -R $GITHUB_WORKSPACE/src/* /amo/extension/
 
 echo "Selecting Firefox manifest..."
 rm /amo/extension/manifest.json
