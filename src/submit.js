@@ -52,6 +52,7 @@ const submitBuild = async () => {
     }
   })
   const body = await response.json()
+  console.log(body)
 
   if (body.error) {
     console.error('The server failed to process the upload.')
