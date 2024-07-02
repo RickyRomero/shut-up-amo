@@ -52,6 +52,7 @@ const submitBuild = async () => {
     }
   })
   const body = await response.json()
+  console.log(`${amoRestEndpoint}/${serverPath}`)
   console.log(body)
 
   if (body.error) {
