@@ -64,7 +64,6 @@ const submitBuild = async (buildPath) => {
     }
   })
   const body = await response.json()
-  console.log(`${amoRestEndpoint}/${serverPath}`)
 
   if (!body.uuid) {
     console.error('The server failed to issue an upload ID.')
@@ -158,9 +157,16 @@ const addVersionMetadata = async (uploadId) => {
     }
   })
   const body = await response.json()
+  console.dir(body)
 
   console.log('Version metadata submitted.')
-  console.dir(body)
+  if (body.version[0]) {
+    console.log('Looks like this version already exists.')
+    console.dir(body)
+    process.exit(1)
+  } else {
+    return
+  }
 }
 
 ;(async () => {
