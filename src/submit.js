@@ -65,14 +65,14 @@ const submitBuild = async (buildPath) => {
   })
   const body = await response.json()
   console.log(`${amoRestEndpoint}/${serverPath}`)
-  console.log(body)
 
-  if (body.error) {
-    console.error('The server failed to process the upload.')
+  if (!body.uuid) {
+    console.error('The server failed to issue an upload ID.')
     console.dir(body)
     process.exit(1)
   } else {
     console.log('Uploaded successfully.')
+    return body.uuid
   }
 }
 
