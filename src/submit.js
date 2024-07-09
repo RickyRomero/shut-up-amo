@@ -157,10 +157,9 @@ const addVersionMetadata = async (uploadId) => {
     }
   })
   const body = await response.json()
-  console.dir(body)
 
   console.log('Version metadata submitted.')
-  if (body.version[0]) {
+  if (!body.id) { // If we don't get an ID back, it probably failed.
     console.log('Looks like this version already exists.')
     console.dir(body)
     process.exit(1)
